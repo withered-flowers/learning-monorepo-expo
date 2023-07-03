@@ -19,3 +19,8 @@
 1. git add --all
 1. git commit -m "<commit-message>"
 1. npx nx run <app-name>:prebuild
+1. cp tsconfig.spec.json ../melodies-e2e/
+1. npx nx run <app-name>-e2e:build-android:bare
+1. cd ../<app-name>-e2e
+1. open .detoxrc.json and change the emulator (devices -> emulator)
+1. npx nx run <app-name>-e2e:test-android:bare
